@@ -16,7 +16,7 @@ steps:
   environment:
     HOME: "/tmp"
   settings:
-    repo: kazilotus/seebeez
+    repo: faisalavencode/droneci_react_repository
     username:
       from_secret: docker_username
     password:
