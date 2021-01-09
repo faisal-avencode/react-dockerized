@@ -22,10 +22,10 @@ steps:
     password:
       from_secret: docker_password
     tags: react
-    # debug: true
-    # volumes:
-    # - name: node_modules
-    #   path: node_modules
+    debug: true
+    volumes:
+    - name: node_modules
+      path: node_modules
   when:
     branch: main
     event: push
