@@ -8,9 +8,9 @@ steps:
   dockerfile: ./dockerfile
   volumes: 
     - name: app
-      path: ".:/app"
+    - path: ".:/app"
     - name: node_modules
-      path: "/app/node_modules"
+    - path: "/app/node_modules"
     environment:
       - NODE_ENV: development
   commands:
