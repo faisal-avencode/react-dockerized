@@ -4,8 +4,10 @@ name: default
 steps:
 
 - name: build
-  image: node:alpine
-  dockerfile: ./dockerfile
+  image: reactapp
+  container_name: react-dev
+  context: .
+  dockerfile: Dockerfile
   volumes: 
     - name: app
       path: ".:/app"
