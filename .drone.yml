@@ -1,32 +1,12 @@
 kind: pipeline
-type: docker
 name: default
-   
-steps:
-- name: test
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
 
-# steps:
-# - name: build-alpha
-#   image: plugins/docker
-#   privileged: true
-#   environment:
-#     HOME: "/tmp"
-#   settings:
-#     repo: faisalavencode/droneci_react_repository
-#     username:
-#       from_secret: docker_username
-#     password:
-#       from_secret: docker_password
-#     tags: react
-#     debug: true
-#     volumes:
-#     - name: node_modules
-#       path: node_modules
-#   when:
-#     branch: main
-#     event: push
+steps:
+- name: docker  
+  image: plugins/docker
+  settings:
+    username: docker_username
+    password: docker_password
+    repo: faisalavencode/droneci_react_repository
+    tags: latest
 
