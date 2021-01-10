@@ -2,6 +2,10 @@ kind: pipeline
 name: default
 
 steps:
+- name: build
+  image: reactapp
+  commands:
+    - 'docker build -t reactapp:1.0 .' 
 - name: docker  
   image: plugins/docker
   settings:
