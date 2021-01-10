@@ -3,7 +3,14 @@ kind: pipeline
 name: default
 
 steps:
-- name: docker
+
+- name: build
+  image: node:alpine
+  commands:
+    - "yarn"
+    - "yarn start"
+
+- name: publish
   image: plugins/docker
   settings:
     username:
