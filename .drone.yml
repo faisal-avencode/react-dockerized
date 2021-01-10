@@ -5,8 +5,10 @@ steps:
 - name: docker  
   image: plugins/docker
   settings:
-    username: docker_username
-    password: docker_password
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
     repo: faisalavencode/droneci_react_repository
     tags: latest
   dockerfile: dockerfile
