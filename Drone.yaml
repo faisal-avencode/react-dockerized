@@ -3,22 +3,6 @@ name: default
 
 steps:
 
-- name: build
-  image: reactapp
-  container_name: react-dev
-  context: .
-  dockerfile: Dockerfile
-  volumes: 
-    - name: app
-      path: ".:/app"
-    - name: node_modules
-      path: "/app/node_modules"
-  environment:
-    NODE_ENV: "development"
-  commands:
-    - "yarn"
-    - "yarn start"
-
 - name: publish
   image: plugins/docker
   settings:
