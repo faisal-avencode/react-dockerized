@@ -11,12 +11,3 @@ steps:
       repo: faisalavencode/droneci_react_repository
       tags: dev
       debug: true
-      volumes:
-        - name: app
-          path: '.:/app'
-        - name: node_modules
-          path: /app/node_modules
-      environment:
-        - NODE_ENV: development
-    dockerfile: dockerfile
-    container_name: react-dev
