@@ -21,6 +21,3 @@ steps:
     context: .
     dockerfile: Dockerfile
     container_name: react-dev
-    commands:
-    - "npm"
-    - "npm start"
