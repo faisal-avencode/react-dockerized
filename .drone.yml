@@ -18,4 +18,5 @@ steps:
           path: /app/node_modules
       environment:
         - NODE_ENV: development
+        - NODE_ENV2: development2
     dockerfile: ./dockerfile
