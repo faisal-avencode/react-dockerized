@@ -19,5 +19,5 @@ steps:
       environment:
         - NODE_ENV: development
     context: .
-    dockerfile: Dockerfile
+    dockerfile: dockerfile
     container_name: react-dev
