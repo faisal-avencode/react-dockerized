@@ -18,6 +18,5 @@ steps:
           path: /app/node_modules
       environment:
         - NODE_ENV: development
-    context: .
     dockerfile: dockerfile
     container_name: react-dev
