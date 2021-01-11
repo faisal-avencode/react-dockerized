@@ -22,5 +22,5 @@ steps:
     dockerfile: Dockerfile
     container_name: react-dev
     commands:
-    - "yarn"
-    - "yarn start"
+    - "npm"
+    - "npm start"
