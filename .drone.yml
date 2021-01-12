@@ -3,14 +3,17 @@ name: default
 steps:
   - name: build
     container_name: react-dev
-    context: .
-    dockerfile: Dockerfile
-    ports:
-      - '3000:3000'
-    volumes:
-      - '.:/app'
-      - /app/node_modules
-    environment:
+    settings:
+      context: .
+      dockerfile: Dockerfile
+      volumes:
+        - name: app
+          path: '.:/app'
+        - name: node_modules
+          path: '/app/node_modules'
+      tags: dev
+      debug: true
+      build_args:
       - NODE_ENV=development
   - name: docker
     image: plugins/docker
