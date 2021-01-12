@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 steps:
   - name: build
-    container_name: react-dev
+    image: react-dev
     settings:
       context: .
       dockerfile: Dockerfile
