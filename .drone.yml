@@ -19,7 +19,7 @@ steps:
     image: alpine
     commands:
       - 'ls -al "/drone/src/"'
-      - mv ./dockerfile ./Dockerfile
+      - mv ./dockerfile ./Dockerfile || true
       - 'ls -al "/drone/src/"'
   - name: docker
     image: plugins/docker
