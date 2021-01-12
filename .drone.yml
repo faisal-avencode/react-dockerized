@@ -3,9 +3,9 @@ name: default
 steps:
   - name: build
     image: react-dev
+    context: .
+    dockerfile: Dockerfile
     settings:
-      context: .
-      dockerfile: Dockerfile
       volumes:
         - name: app
           path: '.:/app'
