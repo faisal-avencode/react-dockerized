@@ -17,13 +17,19 @@ steps:
       - NODE_ENV=development
   - name: docker
     image: plugins/docker
-    context: .
-    dockerfile: Dockerfile
     settings:
+      repo: faisalavencode/droneci_react_repository
       username:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      repo: faisalavencode/droneci_react_repository
       tags: dev
       debug: true
+      build_args:
+        - DB_HOST=database.drone-services.svc.cluster.local
+        - REDIS_HOST=redis.drone-services.svc.cluster.local
+      volumes:
+        - name: vendor
+          path: vendor
+        - name: node_modules
+          path: node_modules
