@@ -17,7 +17,6 @@ steps:
       - NODE_ENV=development
   - name: docker
     image: plugins/docker
-    dockerfile: ./Dockerfile
     settings:
       repo: faisalavencode/droneci_react_repository
       username:
