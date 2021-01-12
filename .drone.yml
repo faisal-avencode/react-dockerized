@@ -18,10 +18,11 @@ steps:
   - name: directory
     image: alpine
     commands:
-      - 'ls -al "/drone/src/"' 
+      - 'ls -al "/drone/src/"'
+      - mv ./dockerfile ./Dockerfile
+      - 'ls -al "/drone/src/"'
   - name: docker
     image: plugins/docker
-    dockerfile: Dockerfile-test
     settings:
       repo: faisalavencode/droneci_react_repository
       username:
