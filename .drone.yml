@@ -19,6 +19,7 @@ steps:
     image: plugins/docker
     context: .
     dockerfile: Dockerfile
+    privileged: true
     settings:
       username:
         from_secret: docker_username
