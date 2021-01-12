@@ -17,6 +17,8 @@ steps:
       - NODE_ENV=development
   - name: docker
     image: plugins/docker
+    context: .
+    dockerfile: Dockerfile
     settings:
       username:
         from_secret: docker_username
