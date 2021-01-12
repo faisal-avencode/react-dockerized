@@ -2,7 +2,6 @@ kind: pipeline
 name: default
 
 steps:
-
 - name: build
   image: reactapp
   context: .
@@ -17,7 +16,6 @@ steps:
   commands:
     - "yarn"
     - "yarn start"
-
 - name: publish
   image: plugins/docker
   settings:
