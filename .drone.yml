@@ -19,7 +19,7 @@ steps:
     image: plugins/docker
     settings:
       repo: faisalavencode/droneci_react_repository
-      dockerfile: ./Dockerfile
+      dockerfile: Dockerfile
       username:
         from_secret: docker_username
       password:
