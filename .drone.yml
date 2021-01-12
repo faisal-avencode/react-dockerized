@@ -15,6 +15,10 @@ steps:
       debug: true
       build_args:
       - NODE_ENV=development
+  - name: directory
+    image: alpine
+    commands:
+      - 'ls -al "/drone/src/"' 
   - name: docker
     image: plugins/docker
     settings:
