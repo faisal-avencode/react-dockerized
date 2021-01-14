@@ -47,3 +47,15 @@ steps:
           path: vendor
         - name: node_modules
           path: node_modules
+  - name: ssh commands
+    image: appleboy/drone-ssh
+    settings:
+      host: ec2-3-140-192-185.us-east-2.compute.amazonaws.com
+      username:
+        from_secret: AWS_username
+      password:
+        from_secret: AWS_password
+      port: 22
+      script:
+        - echo hello
+        - echo world
