@@ -25,7 +25,6 @@ steps:
       - 'ls -al "/drone/src/"'
       - mv ./dockerfile ./Dockerfile || true
       - 'ls -al "/drone/src/"'
-      - 'docker-compose up -d'
 
   - name: docker
     image: plugins/docker
