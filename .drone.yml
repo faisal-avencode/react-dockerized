@@ -57,5 +57,4 @@ steps:
         from_secret: AWS_password
       port: 22
       script:
-        - echo hello
-        - echo world
+        - docker-compose up -d
