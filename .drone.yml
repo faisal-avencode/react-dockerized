@@ -50,7 +50,7 @@ steps:
   - name: ssh commands
     image: appleboy/drone-ssh
     settings:
-      host: ec2-user@ec2-3-140-192-185.us-east-2.compute.amazonaws.com
+      host: ec2-3-140-192-185.us-east-2.compute.amazonaws.com
       username:
         from_secret: AWS_username
       password:
