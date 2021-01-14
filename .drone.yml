@@ -14,7 +14,10 @@ steps:
       tags: dev
       debug: true
       build_args:
-      - NODE_ENV=development
+        - NODE_ENV=development
+      ports:
+        - "3000:3000"
+      container_name: react-dev
 
   - name: directory
     image: alpine
