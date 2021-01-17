@@ -52,7 +52,7 @@ steps:
     settings:
       host: ec2-3-140-192-185.us-east-2.compute.amazonaws.com
       username:
-        from_secret: AWS_username
+        from_secret: root
       password:
         from_secret: AWS_password
       port: 22
