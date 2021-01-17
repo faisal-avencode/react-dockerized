@@ -1,6 +1,7 @@
 kind: pipeline
 name: default
 steps:
+
   - name: build
     image: node:alpine
     context: .
@@ -47,10 +48,11 @@ steps:
           path: vendor
         - name: node_modules
           path: node_modules
+
   - name: ssh commands
     image: appleboy/drone-ssh
     settings:
-      host: ec2-3-140-192-185.us-east-2.compute.amazonaws.com
+      host: https://3.140.192.185/
       username:
         from_secret: AWS_username
       password:
