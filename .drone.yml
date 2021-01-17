@@ -54,8 +54,8 @@ steps:
     settings:
       host: https://3.140.192.185/
       username:
-        from_secret: AWS_username
-      password:
+        from_secret: AWS_user
+      password: 
         from_secret: AWS_password
       port: 22
       script:
